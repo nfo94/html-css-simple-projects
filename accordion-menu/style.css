@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu{
+  width: 300px;
+  overflow: hidden;
+}
+
+.item{
+  border-top: 2px solid #2FA4D6;
+  overflow: hidden;
+}
+
+.btn{
+  display: block;
+  padding: 16px 20px;
+  background: #50514F;
+  color: #FFFCFF;
+  position: relative;
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #50514F;
+  left: 20px;
+  bottom: -7px;
+  transform: rotate(45deg);
+}
+
+.btn i{
+  margin-right: 10px;
+}
+
+.smenu{
+  background: #333;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0; 
+}
+
+.smenu a{
+  display: block;
+  padding: 16px 26px;
+  color: rgb(141, 215, 247);
+  font-size: 14px;
+  margin: 4px 0;
+  position: relative;
+}
+
+.dotted-btn {
+  border-bottom: 1px solid #FFFCFF;
+}
+
+.item:target .smenu{
+  max-height: 12em;
+}
