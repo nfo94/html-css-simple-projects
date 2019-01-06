@@ -2,15 +2,34 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #dfe6e9;
-}
-
-.container{
-  display: flex;
-  justify-content: center;
+  background-color: #f5f6fa;
+  color: #f5f6fa;
 }
 
 .box{
   width: 300px;
+  padding: 40px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 8px 8px 10px rgb(207, 205, 205);
+  background: linear-gradient(to top right, 
+    rgba(162, 155, 254,0.8), 
+    rgba(116, 185, 255,0.8)
+    );
+}
+
+.box input[type = "text"], .box input[type = "password"]{
+  border: 0;
+  background: none;
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  border: 2px solid #f5f6fa;
+  padding: 14px 10px;
+  outline: none;
+  color: rgba(9, 132, 227,1.0);
   
 }
