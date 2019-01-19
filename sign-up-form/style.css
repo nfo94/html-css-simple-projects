@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+}
+
+html{ 
+  box-sizing: border-box; 
+  font-size: 17px
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: inherit;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(45, 52, 54,1.0);
+}
+
+.box{
+  border: 1px solid rgba(243, 156, 18,1.0);
+  height: 25rem;
+  width: 20rem;
+  text-align: center;
+  padding: 1.5rem 0.8rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, .7),
+    rgba(0, 0, 0, .9)
+  ),
+  url(img/daniel-thurler-511435-unsplash.jpg);
+  background-position: right;
+  background-size: cover;
+}
+
+.box h2{
+  color: rgba(243, 156, 18,1.0);
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+}
+
+.box input{
+  width: 15rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: transparent;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn{
+  border: 1px solid #fff;
+  margin: 1rem;
+  color: #fff;
+  background-color: rgba(243, 156, 18,1.0);
+  padding: 0.8rem;
+  width: 10rem;
+}
+
+.login{
+  color: rgba(243, 156, 18,1.0);
+  font-size: .9rem;
+}
