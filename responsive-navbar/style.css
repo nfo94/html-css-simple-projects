@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --white: rgba(255, 255, 255,1.0);
+  --pink: rgba(232, 67, 147,1.0);
+  --red: rgba(214, 48, 49,1.0);
+  --black: rgba(0, 0, 0, .8);
+}
+
+html{ font-size: 17px; }
+
+body{
+  font-family: 'Playfair Display', serif;
+  background-image: url(img/isabella-juskova-470923-unsplash.jpg);
+  background-size: contain;
+  background-repeat: repeat;
+  height: 200vh;
+}
+
+header{
+  text-align: center;
+  position: fixed;
+  width: 100vw;
+  background: var(--black);
+  color: var(--pink);
+  /* border-bottom: 1px dotted var(--pink); */
+}
+
+.logo{ margin: 0; }
+
+nav{
+  position: absolute;
+  text-align: left;
+  top: 100%; 
+  left: 0;
+  background: var(--black);
+  width: 100vw;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav a{
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover{ border-left: 2px dotted var(--pink); }
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li{ margin: .8rem; }
+
+.nav-toggle{ display: none; }
+
+.nav-toggle-label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: .8rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+  display: block;
+  background: white;
+  height: 1px;
+  width: 35px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before{ bottom: 7px; }
+
+.nav-toggle-label span::after{ top: 7px;}
+
+.nav-toggle:checked ~ nav{ 
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a{
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
