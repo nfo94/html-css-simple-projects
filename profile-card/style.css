@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+}
+
+html{ font-size: 17px; }
+
+body{
+  box-sizing: inherit;
+  font-family: 'Lato', sans-serif;
+}
+
