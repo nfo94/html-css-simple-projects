@@ -28,7 +28,7 @@ body{
   font-size: 25px;
 }
 
-.header ul{
+.header__menu-list{
   margin: 0;
 }
 
@@ -41,11 +41,7 @@ body{
 .header a{
   text-decoration: none;
   color: rgba(52, 152, 219,1.0);
-  transition: .4s;
-}
-
-.header a:hover{
-  color: rgba(236, 240, 241,1.0);
+  transition: .6s;
 }
 
 .header__menu-button{
@@ -54,13 +50,69 @@ body{
 }
 
 .banner{
-  margin-top: 15px;
+  margin-top: 120px;
   text-align: center;
   color: rgba(52, 152, 219,1.0);
 }
 
 @media screen and (max-width: 800px){
+  .header__menu-button{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: rgba(44, 62, 80,1.0);
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+  }
+  .header__menu-button i{
+    transition: all .3s;
+    cursor: pointer;
+  }
+  .header__menu-button:focus{
+    pointer-events: none;
+    outline: none;
+  }
+  .header__menu-button:focus i:first-child{
+    transform: scale(0, 0);
+  }
+  .header__menu-button:focus i ~ i{
+    transform: scale(1, 1);
+  }
+  .header__menu-button i ~ i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transform: scale(0, 0);
+  }
   .header__menu-nav{
-    
+    display: block;
+    position: absolute;
+    margin-left: -350px;
+    left: 0;
+    top: 80px;
+    width: 300px;
+    transition: all .4s;
+  }
+  .header__menu-button:focus + nav{
+    display: block;
+    position: absolute;
+    top: 80px;
+    background: rgba(44, 62, 80,1.0);
+    margin-left: 0;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  }
+  .header__menu-list{
+    padding-left: 0;
+  }
+  .header__menu-list li{
+    display: block;
+    padding: 20px;
+    margin-left: 0;
   }
 }
