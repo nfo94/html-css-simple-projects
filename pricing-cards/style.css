@@ -11,6 +11,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   line-height: 2.2rem;
   color: rgba(44, 62, 80,1.0);
+  background-color: rgba(236, 240, 241,1.0);;
 }
 
 .box{
@@ -25,6 +26,8 @@ body{
 
 .card{
   text-align: center;
+  display: flex;
+  align-items: center;
   padding: 1.2rem;
   width: 25rem;
   height: 35rem;
@@ -37,13 +40,17 @@ body{
   height: 40rem;
 }
 
+.card:nth-child(2) h2{
+  font-size: 2rem;
+}
+
 .card h2{
   font-size: 1.5rem;
   text-transform: uppercase;
 }
 
 .card:nth-child(2) h2{
-  color: rgba(46, 204, 113,1.0);;
+  color: rgba(46, 204, 113,1.0);
 }
 
 .card p{
@@ -56,7 +63,6 @@ body{
 }
 
 .card ul{
-  margin-bottom: 3rem;
   margin-top: 1.6rem;
 }
 
@@ -65,7 +71,10 @@ body{
 }
 
 .card li::before{
-  
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color: rgba(46, 204, 113,1.0);
+  margin-right: 0.8rem;
 }
 .card a{
   text-decoration: none;
@@ -74,6 +83,8 @@ body{
   color: rgba(39, 174, 96,1.0);
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: 1.4rem;
+  display: inline-block;
 }
 
 .card:nth-child(2) a{
