@@ -7,6 +7,8 @@
 
 :root{
   --margin: 0.6rem;
+  --white: rgba(255, 255, 255,1.0);
+  --blue: rgba(41, 128, 185,1.0);
 }
 
 html{ font-size: 16px; }
@@ -25,7 +27,7 @@ body{
   height: 28rem;
   margin-top: 2rem;
   padding: 1rem;
-  background-color: rgba(255, 255, 255,1.0);
+  background-color: var(--white);
   box-shadow: 0 0 50px rgba(39, 174, 96,1.0);
   border-radius: 2px;
 }
@@ -34,16 +36,15 @@ body{
   background: url(img/meireles-neto-336081-unsplash.jpg);
   background-position: center;
   background-size: cover; 
-  color: rgba(236, 240, 241,1.0);
+  color: var(--white);
   height: 42%;
   padding: 0.6rem;
 }
 
 .card-banner h2{
   font-size: 1.3rem;
-  border-bottom: 3px solid rgba(142, 68, 173,1.0);
   display: inline-block;
-  background-color: rgba(41, 128, 185,1.0);
+  background-color: var(--blue);
   padding: 0.2rem;
 }
 
@@ -60,7 +61,7 @@ body{
 
 .about i {
   font-size: 1.6rem;
-  color: rgba(41, 128, 185,1.0);
+  color: var(--blue);
   margin-right: 1rem;
   cursor: pointer;
   transition: 0.4s;
